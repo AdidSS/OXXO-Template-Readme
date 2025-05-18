@@ -4,7 +4,7 @@
 
 ![Presentando GIPlan](assets/GIPLANPortada.png)
 
-## Overview
+## Descripción general
 
 WorkAble AI is an intelligent platform designed to support employment coaches who work with people with disabilities. By leveraging Azure AI services, the system enhances coach productivity, streamlines administrative tasks, and improves job matching outcomes. Our solution addresses the critical challenge faced by supported employment programs: limited resources for job coaches who must simultaneously manage documentation, deliver personalized training, solve emerging problems, and provide motivational support to participants.
 
@@ -21,15 +21,15 @@ Through intelligent automation and AI-powered insights, WorkAble AI allows coach
 - **Interactive Dashboard**: Filter and sort participants by employment stage and view key statistics
 - **Calendar Integration**: Coordinate and track sessions with participants
 
-### Solution to problematics
+### Solución a las problemáticas
 
-| **Problematics**                          | **Solutions**                                                      |
+| **Problemática**                          | **Solución**                                                      |
 | ----------------------------------------- | ------------------------------------------------------------------ |
 | Struggling to manage administrative tasks | Calendar, Group of tables and forms (Sessions, Participants, Jobs) |
 | Personalized support                      | Job Suggestions / AI Insights                                      |
 | Real-time problem-solving                 | Job Suggestions / AI Insights                                      |
 
-## Architecture / Tech Stack
+## Arquitectura / Tech Stack
 
 WorkAble AI leverages multiple Azure services to deliver a comprehensive solution:
 
@@ -47,16 +47,16 @@ Serves as the central code repository, housing both the frontend and backend cod
 
 Analyzes participant profiles and job listings to provide intelligent job recommendations. Leverages AI-driven search and language models to match skills and preferences accurately.
 
-- **Azure AI Search**: Retrieves and ranks relevant job postings based on participant data.
-- **OpenAI / GPT-based Models**: Enhances job-matching logic with advanced language understanding.
-
 ### Instrucciones de audio
 
 Transcribes and processes meeting conversations for insights and action items. Assists job coaches by generating real-time suggestions and storing key discussion points.
 
-- **AI Speech**: Converts spoken content into text for further analysis.
-- **AI Language**: Extracts entities, sentiments, and insights from transcribed text.
-- **Calendar Integration**: Synchronizes meeting schedules and notifications with Microsoft Outlook.
+- **OpenAI / GPT-based Models**: Enhances job-matching logic with advanced language understanding.
+ 
+ ### Reporte de distribución de productos
+
+Transcribes and processes meeting conversations for insights and action items. Assists job coaches by generating real-time suggestions and storing key discussion points.
+
 
 ## Responsable AI
 
@@ -106,27 +106,13 @@ OXXO-Challenge/
             ├── layout.tsx
             └── page.tsx
 ```
-
-### Key Components
-
-- **Participant Dashboard**: View and manage participant information
-- **Session Management**: Record and analyze coaching sessions
-- **Job Listing**: Browse and assign job opportunities
-- **Calendar View**: Manage upcoming sessions and availability
-
-## Future Enhancements
+## Futuros pasos
 
 - **Voice Transcription**: Automatic transcription and analysis of coaching sessions
 - **Mobile Application**: Enable on-the-go access for job coaches working in the field
 - **Advanced Analytics**: Deeper insights into coaching effectiveness and outcomes
 - **Expanded Job Sources**: Integration with additional job boards and employment databases
 - **Family Portal**: Secure access for families to view progress and contribute information
-
-## Technology Stack
-
-- **Frontend**: Next.js, TypeScript, Fluent UI React components
-- **Backend**: Node.js, Express
-- **AI**: Azure OpenAI
 
 ## License
 
