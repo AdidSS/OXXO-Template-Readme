@@ -2,7 +2,7 @@
 
 ## Empowering Job Coaches, Enabling Careers
 
-![Preseting Workable AI](ArquitecturaGIPlanConFondo.drawio.png)
+![Preseting Workable AI](ArquitecturaGIPlan.drawio.png)
 
 ## Overview
 
