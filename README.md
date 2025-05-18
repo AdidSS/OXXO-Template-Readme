@@ -14,7 +14,7 @@ Gracias al uso de servicios de inteligencia artificial de Azure, como Azure Open
 * **Planograma animado**: Visualización dinámica que muestra cómo deben colocarse los productos paso a paso.
 * **Instrucciones de audio**: Guía auditiva sincronizada con la animación para facilitar el proceso de implementación.
 * **Preprocesamiento inteligente**: Uso de modelos de lenguaje (Azure OpenAI) para limpiar y estructurar nombres de productos.
-* **Interfaz moderna**: Aplicación web responsiva construida con Next.js y Tailwind CSS.
+* **Interfaz moderna**: Aplicación web construida con Next.js y Tailwind CSS.
 * **Backend robusto**: Gestión de lógica y rutas API usando Python y Flask.
 
 ### Solución a las problemáticas
@@ -22,12 +22,12 @@ Gracias al uso de servicios de inteligencia artificial de Azure, como Azure Open
 | **Problemática**                                                | **Solución**                                                |
 | --------------------------------------------------------------- | ----------------------------------------------------------- |
 | Desalineación entre planograma teórico y acomodo real           | Animación visual paso a paso                                |
-| Ambigüedad en los nombres de productos                          | Preprocesamiento con Azure OpenAI para instrucciones claras |
-| Dificultad de implementación para personas con poca experiencia | Instrucciones auditivas fáciles de seguir                   |
+| Confusión en los nombres de productos                          | Preprocesamiento con Azure OpenAI para instrucciones claras |
+| Dificultad de implementación para personas con poca experiencia o capacidades difernetes | Instrucciones auditivas fáciles de seguir junto con una animación visual                |
 
 ## Arquitectura / Tech Stack
 
-GIPlan combina herramientas modernas de desarrollo web y servicios de inteligencia artificial en la nube:
+GIPlan combina herramientas modernas de desarrollo web y servicios de inteligencia artificial:
 
 ![Arquitectura GIPlan](assets/ArquitecturaGIPlan.png)
 
@@ -47,9 +47,10 @@ Convierte descripciones complejas de productos en frases claras y comprensibles 
 
 ### Reporte de distribución
 
-Genera reportes que comparan el acomodo real de productos con el planograma ideal, facilitando auditorías rápidas.
+Genera reportes dónde se puede comparar de forma rápida e intuitiva la distribución de los productos.
 
 ## Principios de IA Responsable
+Como equipo consideramos que es fundamental implementar soluciones de Inteligencia Artificial que estén alineadadas con los principios éticos de la Inteligencia Artificial para procurar un beneficio general
 
 | **Principio**        | **Aplicación en GIPlan**                                                                                                          |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
