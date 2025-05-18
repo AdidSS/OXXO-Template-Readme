@@ -1,81 +1,69 @@
 # GIPlan
-
 ## Planograma visual, auditivo, fácil de implementar
 
 ![Presentando GIPlan](assets/GIPLANPortada.png)
 
 ## Descripción general
 
-WorkAble AI is an intelligent platform designed to support employment coaches who work with people with disabilities. By leveraging Azure AI services, the system enhances coach productivity, streamlines administrative tasks, and improves job matching outcomes. Our solution addresses the critical challenge faced by supported employment programs: limited resources for job coaches who must simultaneously manage documentation, deliver personalized training, solve emerging problems, and provide motivational support to participants.
+GIPlan es una herramienta innovadora diseñada para facilitar la correcta implementación de planogramas en tiendas de autoservicio. A diferencia de los planogramas tradicionales que solo muestran imágenes estáticas, GIPlan presenta una animación del acomodo de productos acompañada de instrucciones de audio, haciendo que el proceso de organización sea más intuitivo, accesible y menos propenso a errores.
 
-Through intelligent automation and AI-powered insights, WorkAble AI allows coaches to focus more on meaningful interactions with participants and less on administrative burdens, ultimately improving employment outcomes for people with disabilities.
+Gracias al uso de servicios de inteligencia artificial de Azure, como Azure OpenAI, GIPlan transforma nombres de productos en instrucciones de voz claras y comprensibles, reduciendo ambigüedades y mejorando la eficiencia del personal encargado del acomodo.
 
-![Workable AI Dashboard](./assets/dashboard_rounded.png)
+## Características clave
 
-## Key Features
-
-- **Participant Management**: Complete profiles with skills, preferences, and employment history
-- **Smart Session Management**: Schedule, record, and analyze coaching sessions
-- **Intelligent Job Matching**: AI-powered recommendations based on participants' abilities and preferences
-- **Coaching Insights**: AI-generated observations and action suggestions for personalized support
-- **Interactive Dashboard**: Filter and sort participants by employment stage and view key statistics
-- **Calendar Integration**: Coordinate and track sessions with participants
+* **Planograma animado**: Visualización dinámica que muestra cómo deben colocarse los productos paso a paso.
+* **Instrucciones de audio**: Guía auditiva sincronizada con la animación para facilitar el proceso de implementación.
+* **Preprocesamiento inteligente**: Uso de modelos de lenguaje (Azure OpenAI) para limpiar y estructurar nombres de productos.
+* **Interfaz moderna**: Aplicación web responsiva construida con Next.js y Tailwind CSS.
+* **Backend robusto**: Gestión de lógica y rutas API usando Python y Flask.
 
 ### Solución a las problemáticas
 
-| **Problemática**                          | **Solución**                                                      |
-| ----------------------------------------- | ------------------------------------------------------------------ |
-| Struggling to manage administrative tasks | Calendar, Group of tables and forms (Sessions, Participants, Jobs) |
-| Personalized support                      | Job Suggestions / AI Insights                                      |
-| Real-time problem-solving                 | Job Suggestions / AI Insights                                      |
+| **Problemática**                                                | **Solución**                                                |
+| --------------------------------------------------------------- | ----------------------------------------------------------- |
+| Desalineación entre planograma teórico y acomodo real           | Animación visual paso a paso                                |
+| Ambigüedad en los nombres de productos                          | Preprocesamiento con Azure OpenAI para instrucciones claras |
+| Dificultad de implementación para personas con poca experiencia | Instrucciones auditivas fáciles de seguir                   |
 
 ## Arquitectura / Tech Stack
 
-WorkAble AI leverages multiple Azure services to deliver a comprehensive solution:
+GIPlan combina herramientas modernas de desarrollo web y servicios de inteligencia artificial en la nube:
 
 ![Arquitectura GIPlan](assets/ArquitecturaGIPlan.png)
 
-### Repo
+* **Frontend**: Next.js + Tailwind CSS
+* **Backend**: Flask + Python
+* **Servicios en la nube**: Azure OpenAI (para normalización y generación de instrucciones de texto)
 
-Serves as the central code repository, housing both the frontend and backend code. Ensures version control and collaborative development workflows.
-
-- **GitHub**: Stores and manages the codebase, issues, and pull requests.
-- **Next.js / Tailwind css**: Frontend framework and library for building interactive user interfaces.
-- **Flask / Python**: Backend framework and language for handling server-side logic and API routes..
+## Componentes principales
 
 ### Animación
 
-Analyzes participant profiles and job listings to provide intelligent job recommendations. Leverages AI-driven search and language models to match skills and preferences accurately.
+Muestra visualmente cómo deben colocarse los productos en cada estante de forma secuencial, permitiendo una implementación más intuitiva y precisa.
 
 ### Instrucciones de audio
 
-Transcribes and processes meeting conversations for insights and action items. Assists job coaches by generating real-time suggestions and storing key discussion points.
+Convierte descripciones complejas de productos en frases claras y comprensibles mediante preprocesamiento con Azure OpenAI, para luego transformarlas en audio.
 
-- **OpenAI / GPT-based Models**: Enhances job-matching logic with advanced language understanding.
- 
- ### Reporte de distribución de productos
+### Reporte de distribución
 
-Transcribes and processes meeting conversations for insights and action items. Assists job coaches by generating real-time suggestions and storing key discussion points.
+Genera reportes que comparan el acomodo real de productos con el planograma ideal, facilitando auditorías rápidas.
 
+## Principios de IA Responsable
 
-## Responsable AI
+| **Principio**        | **Aplicación en GIPlan**                                                                                                          |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Equidad              | Las instrucciones se generan objetivamente a partir de reglas claras de preprocesamiento.                                         |
+| Inclusión            | El sistema auditivo permite que personas con distintos niveles de alfabetización o habilidades visuales participen en el acomodo. |
+| Fiabilidad           | Las instrucciones son generadas a partir de modelos consistentes, reduciendo el riesgo de ambigüedad en los nombres de productos. |
+| Transparencia        | Las transformaciones aplicadas a los nombres de productos pueden ser verificadas por el usuario antes de ser convertidas a audio. |
+| Privacidad           | No se utiliza información personal ni sensible en el proceso de normalización o generación de instrucciones.                      |
+| Rendición de cuentas | El acomodo final sigue siendo verificado por un humano responsable, aunque el sistema asista en la automatización del proceso.    |
 
-Microsoft has established seven core principles to ensure the responsible development and deployment of AI technologies. Below is a table outlining these principles and their presence in the development of the project.
-
-| **Principles**         | **How they are included**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Fairness               | - Using objective, skills-based matching criteria without relying on Personal Identifiable Information (PII) in job suggestions<br>- Consistently applying the same job matching criteria to all participants with similar qualifications and needs<br>- Evaluating compatibility based on relevant factors like skills, accommodations needed, transportation status, and employment goals—not personal characteristics<br>- Maintaining balance between participant needs and job requirements without favoring certain groups                                                                                                                                                                                                        |
-| Inclusiveness          | - Designed to support people with disabilities in finding and retaining meaningful employment<br>- Promotes social inclusion by helping job coaches focus on empowering participants through AI-assisted insights<br>- Considers accessibility features, supportive environments, and accommodation availability in job matches                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Reliability and Safety | - Analyzing multiple dimensions of compatibility (skills, accommodations, location, schedule, etc.) for robust matching<br>- Presenting job compatibility reasons that coaches can verify and validate<br>- Leaving final match decisions to human coaches who understand nuanced participant needs<br>- Maintaining structured data schemas that ensure consistent evaluation criteria<br>- Supporting coaches with clear visualizations and organized information to prevent oversight of critical factors<br>- Providing tools for ongoing session tracking and participant progress monitoring to ensure continuous support                                                                                                         |
-| Transparency           | - Clearly displaying compatibility reasons for each job match, helping coaches understand why specific recommendations were made<br>- Showing match scores based on objective criteria from participant and job profiles<br>- Providing detailed job information and participant requirements side-by-side for transparent comparison<br>- Enabling coaches to see which specific factors (like required skills, accessibility features, accommodations) contributed to match recommendations<br>- Offering visibility into the matching process through detailed views that expose the reasoning behind AI suggestions<br>- Supporting coach decision-making with clear information presentation rather than black-box recommendations |
-| Privacy and Security   | - Not using Personal Identification Information in the job matching algorithms<br>- Implementing strict access controls where only authorized coaches can access their participants' personal information<br>- Using secure database partitioning with appropriate keys (as shown in the Cosmos DB container configuration)<br>- Storing sensitive data in compliance with data protection regulations<br>- Separating personal identifiers from matching criteria to maintain privacy during job suggestions<br>- Ensuring that participant data is well-protected and safely stored in secure cloud infrastructure<br>- Maintaining appropriate data boundaries between different user roles in the system                            |
-| Accountability         | - Humans remain in control<br>- Provides intelligent job suggestions, but the final decisions are always made by the job coach<br>- Ensures human oversight and ethical decision-making throughout the process                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-## Development
-
-### Project Structure
+## Estructura del proyecto
 
 ```
-OXXO-Challenge/
+GIPlan/
 ├── README.md
 └── my-app/
     ├── .gitignore
@@ -98,7 +86,7 @@ OXXO-Challenge/
     │   │   ├── goodtexture.jpg
     │   │   └── plastic.jpg
     │   └── Product images/
-    │       ├── Archivos de imagenes
+    │       └── Archivos de imagenes
     └── src/
         └── app/
             ├── favicon.ico
@@ -106,14 +94,20 @@ OXXO-Challenge/
             ├── layout.tsx
             └── page.tsx
 ```
+
 ## Futuros pasos
 
-- **Voice Transcription**: Automatic transcription and analysis of coaching sessions
-- **Mobile Application**: Enable on-the-go access for job coaches working in the field
-- **Advanced Analytics**: Deeper insights into coaching effectiveness and outcomes
-- **Expanded Job Sources**: Integration with additional job boards and employment databases
-- **Family Portal**: Secure access for families to view progress and contribute information
+* **Transcripción de voz**: Convertir instrucciones habladas de los supervisores en nuevos planogramas automáticamente.
+* **Aplicación móvil**: Para facilitar el acomodo en campo.
+* **Análisis avanzado**: Métricas de eficiencia en la implementación de planogramas.
+* **Entrenamiento del personal**: Módulo interactivo de aprendizaje usando IA.
+* **Modo sin conexión**: Para tiendas sin conexión estable a internet.
 
-## License
+## Licencia
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Este proyecto está licenciado bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
+
+---
+
+¿Te gustaría que también genere el archivo `README.md` directamente con este contenido?
+
