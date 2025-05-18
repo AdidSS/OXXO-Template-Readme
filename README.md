@@ -1,8 +1,8 @@
-# WorkAble AI
+# GIPlan
 
-## Empowering Job Coaches, Enabling Careers
+## Planograma visual, auditivo, fácil de implementar
 
-![Preseting Workable AI](assets/GIPLANPortada.png)
+![Presentando GIPlan](assets/GIPLANPortada.png)
 
 ## Overview
 
@@ -39,7 +39,7 @@ https://github.com/user-attachments/assets/97c04b2d-1143-4944-99df-d8f00cd793a1
 
 WorkAble AI leverages multiple Azure services to deliver a comprehensive solution:
 
-![Workable AI Architecture](assets/ArquitecturaGIPlan.drawio.png)
+![Arquitectura GIPlan](assets/ArquitecturaGIPlan.png)
 
 ### Repo
 
