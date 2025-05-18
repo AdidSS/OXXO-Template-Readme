@@ -24,6 +24,7 @@ Gracias al uso de servicios de inteligencia artificial de Azure, como Azure Open
 | Desalineación entre planograma teórico y acomodo real           | Animación visual paso a paso                                |
 | Confusión en los nombres de productos                          | Preprocesamiento con Azure OpenAI para instrucciones claras |
 | Dificultad de implementación para personas con poca experiencia o capacidades difernetes | Instrucciones auditivas fáciles de seguir junto con una animación visual                |
+| Soluciones de difícil implementación en proyectos disruptivos                          | GIPlan es de fácil implementación, pues trabaja apartir de archivos csv, los cuáles son fáciles de modificar |
 
 ## Arquitectura / Tech Stack
 
@@ -95,6 +96,9 @@ GIPlan/
             ├── layout.tsx
             └── page.tsx
 ```
+## Costos: 
+Para el preprocesamiento de los nombres se utiliza el servicio de azure Open AI. El modelo utilizado GPT 3.5-Turbo tiene un costo de $0.0020 por 1,000 tokens. Por la forma en la que está diseñada la solución, solo se debe de utilizar una vez este servicio para generar los nombres adecuados y posteriormente se exporta a un csv, ahorrando llamadas innecesarias o repetitivas al servicio, Pues para cada planograma nuevo solo se deben de preprocesar una vez los nombres de los productos.
+Para este escenario, el preprocesamiento de los 48 productos consumió un total de 6.73k tokens, lo que se traduce a un costo mensual de $0.01 dólares.
 
 ## Futuros pasos
 
@@ -103,6 +107,7 @@ GIPlan/
 * **Análisis avanzado**: Métricas de eficiencia en la implementación de planogramas.
 * **Entrenamiento del personal**: Módulo interactivo de aprendizaje usando IA.
 * **Modo sin conexión**: Para tiendas sin conexión estable a internet.
+* **Optimización del preprocesamiento de datos**: Para tiendas con un volumen considerablemente mayor de productos.
 
 ## Licencia
 
