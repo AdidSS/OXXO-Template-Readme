@@ -14,7 +14,7 @@ Through intelligent automation and AI-powered insights, WorkAble AI allows coach
 
 ## Demo
 
-[Presentation Slides](./Workable%20AI%20Presentation.pdf)
+[Diapositivas de la presentación](assets/PresentacionGIPlanFEMSAHackathon.pdf)
 
 https://github.com/user-attachments/assets/97c04b2d-1143-4944-99df-d8f00cd793a1
 
