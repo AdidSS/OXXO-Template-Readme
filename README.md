@@ -113,7 +113,5 @@ Para este escenario, el preprocesamiento de los 48 productos consumió un total 
 
 Este proyecto está licenciado bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
 
----
 
-¿Te gustaría que también genere el archivo `README.md` directamente con este contenido?
 
